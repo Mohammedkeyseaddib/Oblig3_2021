@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bestilling av kinobilleter (Asker kino)</title>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+</head>
+<body style="background-color: coral;">
+<h1>Bestilling av kinobilletter </h1>
+<form style="width:15%">
+    <div form="form-group">
+        <label class="control-label" for="input-film"> Velg film:</label>
+        <select class="form-control" id="input-film" autofocus>
+            <option hidden> Velg film:</option>
+            <option> Bad Boys </option>
+            <option> Bad Boys For Life </option>
+            <option> Terminator </option>
+            <option> Abduction </option>
+            <option>Harry Potter</option>
+        </select>
+        <div id="film-validate" class="alert-danger"></div>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="input-antall">Antall</label>
+        <input class="form-control" type="number" min="1" max="10" id="input-antall" required>
+    </div>
+    <br>
+    <div class="form-group">
+        <label class="control-label" for="input-fornavn">Fornavn</label>
+        <input class="form-control" type="text" id="input-fornavn" required>
+        <div id="fornavn-validate" class="alert-danger"></div>
+    </div>
+    <br>
+    <div class="form-group">
+        <label class="control-label" for="input-etternavn">Etternavn</label>
+        <input class="form-control" type="text" id="input-etternavn" required>
+        <div id="etternavn-validate" class="alert-danger"></div>
+    </div>
+    <br>
+    <div class="form-group">
+        <label class="control-label" for="input-fornavn">Telefonnummer</label>
+        <input class="form-control" type="tel" id="input-telefonnummer" required>
+        <div id="telefonnr-validate" class="alert-danger"></div>
+    </div>
+    <br>
+    <div class="form-group">
+        <label class="control-label" for="input-email">Epost</label>
+        <input class="form-control" type="email" id="input-email" required>
+        <div id="email-validate" class="alert-danger"></div>
+    </div>
+    <br>
+    <button type="button" class="btn btn-primary" onclick="sjekkInput()"> Kjøp billett</button>
+
+</form>
+<br>
+<button type="button" class="btn btn-primary" onclick="slettBiletter()"> Slett billetter</button>
+
+<div class="tabell">
+
+</div>
+
+
+</body>
+</html>
